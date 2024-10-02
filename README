@@ -1,0 +1,35 @@
+# UCAM Course Evaluation Automation Script
+
+## Overview
+This Python script automates the course evaluation process on the UCAM portal at United International University. It logs in, navigates to the course evaluation form, selects the first available course and grade, fills out the form, and submits it.
+
+## Prerequisites
+- **Python 3.x** - Download from [here](https://www.python.org/downloads/).
+- **Selenium** - Install via pip:
+    ```bash
+    pip install selenium
+    ```
+- **ChromeDriver** - Download the version matching your Chrome from [here](https://chromedriver.chromium.org/downloads) or [here](https://googlechromelabs.github.io/chrome-for-testing/) and update the `driver_path` in the script.
+
+## How to Use
+1. Clone the Repository and update the following lines with your credentials in the script:
+    ```python
+    username_field.send_keys("your_student_id")  # Replace with your username
+    password_field.send_keys("your_password")  # Replace with your password
+    ```
+
+2. Run the Script:
+    ```bash
+    python script_name.py
+    ```
+
+## Script Breakdown
+- **Login** to UCAM using your credentials.
+- **Navigate** to "Course Evaluation" > "Evaluation Form".
+- **Select Course** and **Expected Grade** (A- by default).
+- **Fill out** the evaluation form with predefined answers.
+- **Submit** the form.
+
+## Potential Issues
+- Ensure ChromeDriver matches your installed version of Chrome.
+- Update element locators if the UCAM portal structure changes.
